@@ -37,14 +37,15 @@ export default function TextForm(props) {
 
   return (
     <>
-      <h1>{props.title}</h1>
-      <div className=" container mb-3">
+      <h1 style={{color:props.mode==='dark'?'white':'black'}}>{props.title}</h1>
+      <div className=" container mb-3 " style={{color:props.mode==='dark'?'white':'black'}}>
         <textarea
           className="form-control"
           id="mybox"
           rows="8"
           value={text}
           onChange={textHandler}
+          
         ></textarea>
         <br></br>
         <button className="btn btn-primary mx-2" onClick={handleUpClick}>
@@ -69,7 +70,7 @@ export default function TextForm(props) {
           Clear Box
         </button>
       </div>
-      <div className="container my-2">
+      <div className="container my-2" style={{color:props.mode==='dark'?'white':'black'}}>
         <h1>Text Summary</h1>
         <i>
           <p>
@@ -81,8 +82,8 @@ export default function TextForm(props) {
           <p>Time to Read:{text.split(" ").length * 0.008}mins</p>
         </b>
         <h2>Preview</h2>
-        <p>{text}</p>
-        <h2>Frequencies</h2>
+        <p>{text.length>0?text:"Enter something to preview"}</p>
+        {/* <h2>Frequencies</h2> */}
       </div>
     </>
   );
