@@ -2,15 +2,18 @@ import React, { useState } from "react";
 
 export default function TextForm(props) {
   const handleUpClick = () => {
-    console.log("button clicked");
     setText(text.toUpperCase(text));
+    props.showAlert("Converted to Upper case","Success: ");
   };
   const handleLowerClick = () => {
-    console.log("button clicked");
     setText(text.toLowerCase(text));
+    props.showAlert("Converted to Lower case","Success: ");
+
   };
   const handleClearClick = () => {
     setText("");
+    props.showAlert("Cleared","Success: ");
+
   };
   // const handleSpaceClick = () => {
     
@@ -31,7 +34,9 @@ export default function TextForm(props) {
     words.forEach(element => {
        uppercaseword += element.charAt(0).toUpperCase() + element.slice(1) + " "
     });
-    setText(uppercaseword)
+    setText(uppercaseword);
+    props.showAlert("Converted to Title Case","Success: ");
+
 }
   const [text, setText] = useState("");
 
