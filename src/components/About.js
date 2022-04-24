@@ -41,7 +41,7 @@ export default function About() {
                 aria-controls="collapseOne"
                 style={mystyle}
               >
-                Accordion Item #1
+                <strong>Who am I?</strong>
               </button>
             </h2>
             <div
@@ -51,15 +51,7 @@ export default function About() {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body"  style={mystyle}>
-                <strong>This is the first item's accordion body.</strong> It is
-                shown by default, until the collapse plugin adds the appropriate
-                classNamees that we use to style each element. These classNamees
-                control the overall appearance, as well as the showing and
-                hiding via CSS transitions. You can modify any of this with
-                custom CSS or overriding our default variables. It's also worth
-                noting that just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                I am Software Engineer working on Full Stack Applications.
               </div>
             </div>
           </div>
@@ -74,7 +66,7 @@ export default function About() {
                 aria-controls="collapseTwo"
                 style={mystyle}
               >
-                Accordion Item #2
+                <strong>Contact Me.</strong>
               </button>
             </h2>
             <div
@@ -84,15 +76,8 @@ export default function About() {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body"  style={mystyle}>
-                <strong>This is the second item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classNamees that we use to style each element. These
-                classNamees control the overall appearance, as well as the
-                showing and hiding via CSS transitions. You can modify any of
-                this with custom CSS or overriding our default variables. It's
-                also worth noting that just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                <a href="https://www.linkedin.com/in/bhanu-prakash-sakinala/">LinkedIn</a><br/>
+                <strong>Mobile:7730944736</strong>
               </div>
             </div>
           </div>
@@ -107,7 +92,7 @@ export default function About() {
                 aria-controls="collapseThree"
                 style={mystyle}
               >
-                Accordion Item #3
+                <strong>Why to Use this Application</strong>
               </button>
             </h2>
             <div
@@ -117,21 +102,14 @@ export default function About() {
               data-bs-parent="#accordionExample"
             >
               <div className="accordion-body"  style={mystyle}>
-                <strong>This is the third item's accordion body.</strong> It is
-                hidden by default, until the collapse plugin adds the
-                appropriate classNamees that we use to style each element. These
-                classNamees control the overall appearance, as well as the
-                showing and hiding via CSS transitions. You can modify any of
-                this with custom CSS or overriding our default variables. It's
-                also worth noting that just about any HTML can go within the{" "}
-                <code>.accordion-body</code>, though the transition does limit
-                overflow.
+                This Application allows you to analyze the text you have entered and it also allows you to perform text utility functions
               </div>
             </div>
           </div>
         </div>
         <div className="container my-3">
-        <button className="btn btn-dark" onClick={toggeleStyle}>{btntext}</button></div>
+        {/* <button className="btn btn-dark" onClick={toggeleStyle }>{btntext}</button> */}
+        </div>
       </div>
     </>
   );
