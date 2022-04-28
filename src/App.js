@@ -41,7 +41,7 @@ function App() {
       <div className="container">
         
         <Routes>
-          <Route path="/about" element={<About/>}>
+          <Route path="/about" element={<About mode={mode}/>}>
             
           </Route>
 

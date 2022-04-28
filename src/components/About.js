@@ -1,30 +1,12 @@
-import React,{useState} from "react";
+import React from "react";
 
-export default function About() {
-    const [btntext,setBtnText]=useState("Enable Dark Mode");
-    const [mystyle,setStyle]=useState({
-        color:'black',
-        backgroundColor:'white'
-    })
-    function toggeleStyle(){
-        console.log("toggle clicked");
-        if(mystyle.color==='white')
-        {
-            setStyle({
-                color:'black',
-                backgroundColor:'white'
-            });
-            setBtnText("Enable Dark Mode")
-        }
-        else{
-            setStyle({
-                color:'white',
-                backgroundColor:'black',
-                border:'2px'
-            });
-            setBtnText("Enable Light Mode")
-        }
-    }
+export default function About(props) {
+  let mystyle={
+    color:props.mode==="light"?"black":"white",
+    backgroundColor:props.mode==="dark"?"#042743":"white",
+    border:"2px solid white"
+  }
+    
   return (
     <>
       <div className="container my-3"  style={mystyle}>
@@ -56,7 +38,7 @@ export default function About() {
             </div>
           </div>
           <div className="accordion-item">
-            <h2 className="accordion-header" id="headingTwo">
+            <h2 className="accordion-header" id="headingTwo" style={mystyle}>
               <button
                 className="accordion-button collapsed"
                 type="button"
@@ -74,6 +56,7 @@ export default function About() {
               className="accordion-collapse collapse"
               aria-labelledby="headingTwo"
               data-bs-parent="#accordionExample"
+              // style={mystyle}
             >
               <div className="accordion-body"  style={mystyle}>
                 <a href="https://www.linkedin.com/in/bhanu-prakash-sakinala/">LinkedIn</a><br/>
@@ -107,9 +90,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="container my-3">
-        <button className="btn btn-dark" onClick={toggeleStyle }>{btntext}</button>
-        </div>
+       
       </div>
     </>
   );

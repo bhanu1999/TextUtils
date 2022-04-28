@@ -61,30 +61,34 @@ export default function TextForm(props) {
           {" "}
           Convert to Lower Case
         </button>
-        <button className="btn btn-success mx-2" onClick={capitalFirstLetter}>
+        <button className="btn btn-success mx-2 my-1" onClick={capitalFirstLetter}>
           {" "}
         Title Case
         </button>
-        <button className="btn btn-success mx-2" onClick={speak}>
+        <button className="btn btn-success mx-2 my-1" onClick={speak}>
           {" "}
         Speak
         </button>
         
-        <button className="btn btn-primary mx-2" onClick={handleClearClick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleClearClick}>
           {" "}
           Clear Box
         </button>
       </div>
-      <div className="container my-2" style={{color:props.mode==='dark'?'white':'black'}}>
+      <div className="container my-2 my-1" style={{color:props.mode==='dark'?'white':'black'}}>
         <h1>Text Summary</h1>
         <i>
           <p>
-            Words are {text.split(" ").length} and characters are {text.length}
+            Words are {text.split(" ").filter((element)=>{
+              return element.length!==0;
+            }).length} and characters are {text.length}
           </p>
         </i>
         <b>
           {" "}
-          <p>Time to Read:{text.split(" ").length * 0.008}mins</p>
+          <p>Time to Read:{text.split(" ").filter((element)=>{
+              return element.length!==0;
+            }).length * 0.008}mins</p>
         </b>
         <h2>Preview</h2>
         <p>{text.length>0?text:"Enter something to preview"}</p>
