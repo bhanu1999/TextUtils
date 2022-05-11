@@ -53,24 +53,24 @@ export default function TextForm(props) {
           
         ></textarea>
         <br></br>
-        <button className="btn btn-primary mx-2" onClick={handleUpClick}>
+        <button disabled={text.length===0} className="btn btn-primary mx-2" onClick={handleUpClick}>
           {" "}
           Convert to Upper Case
         </button>
-        <button className="btn btn-success mx-2" onClick={handleLowerClick}>
+        <button disabled={text.length===0}className="btn btn-success mx-2" onClick={handleLowerClick}>
           {" "}
           Convert to Lower Case
         </button>
-        <button className="btn btn-success mx-2 my-1" onClick={capitalFirstLetter}>
+        <button disabled={text.length===0}className="btn btn-success mx-2 my-1" onClick={capitalFirstLetter}>
           {" "}
         Title Case
         </button>
-        <button className="btn btn-success mx-2 my-1" onClick={speak}>
+        <button disabled={text.length===0}className="btn btn-success mx-2 my-1" onClick={speak}>
           {" "}
         Speak
         </button>
         
-        <button className="btn btn-primary mx-2 my-1" onClick={handleClearClick}>
+        <button disabled={text.length===0} className="btn btn-primary mx-2 my-1" onClick={handleClearClick}>
           {" "}
           Clear Box
         </button>
